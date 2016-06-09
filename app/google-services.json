@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "738948073100",
+    "project_id": "sunshine-wear-1336"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738948073100:android:3caeb874bdb82d44",
+        "android_client_info": {
+          "package_name": "com.example.android.sunshine"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFPTHqC3G5IVahABAOZf-CFOaF0AAiBk4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
