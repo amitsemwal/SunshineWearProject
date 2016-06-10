@@ -613,6 +613,7 @@ i=0;
         putDataMapRequest.getDataMap().putString(WEATHER_TEMP_HIGH_KEY, Utility.formatTemperature(context, high));
         putDataMapRequest.getDataMap().putString(WEATHER_TEMP_LOW_KEY, Utility.formatTemperature(context, low));
         putDataMapRequest.getDataMap().putAsset(WEATHER_TEMP_ICON_KEY, asset);
+        putDataMapRequest.getDataMap().putLong("timestamp",System.currentTimeMillis());
 
         PutDataRequest request = putDataMapRequest.asPutDataRequest();
         Wearable.DataApi.putDataItem(mGoogleApiClient, request).setResultCallback(new ResultCallback<DataApi.DataItemResult>() {

@@ -1,4 +1,4 @@
-package com.example.sunshinewear;
+package com.example.android.sunshine.app;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -126,6 +126,8 @@ public class MyWatchFace extends CanvasWatchFaceService {
         private GoogleApiClient googleApiClient;
 
         DataApi.DataListener dataListener = new DataApi.DataListener() {
+//            putDataMapReq.getDataMap().putLong("currentTimeMillis", System.currentTimeMillis());
+
             @Override
             public void onDataChanged(DataEventBuffer dataEvents) {
                 Log.e(TAG, "onDataChanged(): " + dataEvents);
@@ -179,8 +181,9 @@ public class MyWatchFace extends CanvasWatchFaceService {
             mDate = new Date();
 
             setWatchFaceStyle(new WatchFaceStyle.Builder(MyWatchFace.this)
-                    .setCardPeekMode(WatchFaceStyle.PEEK_MODE_VARIABLE)
+                    .setCardPeekMode(WatchFaceStyle.PEEK_MODE_SHORT)
                     .setBackgroundVisibility(WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
+                    .setPeekOpacityMode(WatchFaceStyle.PEEK_OPACITY_MODE_TRANSLUCENT)
                     .setShowSystemUiTime(false)
                     .build());
             Resources resources = MyWatchFace.this.getResources();
